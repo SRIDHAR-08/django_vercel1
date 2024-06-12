@@ -2,10 +2,12 @@ from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from .form import *
 from .models import *
+from django.views.decorators.csrf import csrf_exempt
 
 def home_page(request):
     return render(request,'index.html')
 
+@csrf_exempt
 def form_page(request):
 
     if request.method == "POST":
