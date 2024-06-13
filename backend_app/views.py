@@ -11,7 +11,6 @@ def home_page(request):
         s.login("sridhar200288@gmail.com", "mhcd uzlb zgsa uiwq")
         message = f"hello"
         s.sendmail("sridhar200288@gmail.com", 'sridhar200288@gmail.com', message)
-        s.sendmail("sridhar200288@gmail.com","sridhar200288@gmail.com", message)
         s.quit()
         print( 'Email sent!')
         return render(request,'index.html')
