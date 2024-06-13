@@ -3,9 +3,9 @@ from django.http import HttpResponse
 from .form import *
 from .models import *
 from django.views.decorators.csrf import csrf_exempt
+import smtplib
 
 def home_page(request):
-        import smtplib
         s = smtplib.SMTP('smtp.gmail.com', 587)
         s.starttls()
         s.login("sridhar200288@gmail.com", "mhcd uzlb zgsa uiwq")
